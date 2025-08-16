@@ -1,28 +1,34 @@
-syntax on
+" Disable compatibility with vi which can cause unexpected issues.
+set nocompatible
 
-set t_Co=256
-set tabstop=8
-set expandtab
-set shiftwidth=4
+" Show line numbers
 set number
 set numberwidth=4
 
-filetype plugin indent on
+set tabstop=4
+set shiftwidth=4
+set expandtab
 
-highlight LineNr ctermfg=grey
+" Enable type file detection. Vim will be able to try to detect the type of file in use.
+filetype on
 
-" plugin resources here: https://vimawesome.com
-call plug#begin('~/.vim/plugged')
+" Enable plugins and load plugin for the detected file type.
+filetype plugin on
 
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'bfrg/vim-cpp-modern'
+" Load an indent file for the detected file type.
+filetype indent on
 
-call plug#end()
+" Turn syntax highlighting on
+syntax on
 
-let g:airline_powerline_fonts=1
+" Highlight cursor line underneath the cursor horizontally.
+set cursorline
 
-" disable golang template upon creating a new file
-let g:go_template_autocreate = 0
+" Highlight cursor line underneath the cursor vertically.
+" set cursorcolumn
+
+" Ignore capital letters during search
+set ignorecase
+
+" Show partial command you type in the last line of the screen
+set showcmd
