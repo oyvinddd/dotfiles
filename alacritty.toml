@@ -1,0 +1,18 @@
+[general]
+import = ["~/.config/alacritty/themes/themes/falcon.toml"]
+[font]
+normal = { family = "NotoMono NFM", style = "Regular" }
+#normal = { family = "NotoSansN MF", style = "Bold" }
+size = 18.0
+offset = { x = 2, y = 2 }
+[window]
+padding = { x = 4, y = 4 }
+opacity = 0.95
+blur = true
+startup_mode = "Maximized"
+title = "Hello World!"
+[cursor]
+style = { shape = "Block", blinking = "Always" }
+thickness = 0.18
+[terminal]
+shell = { program = "/usr/bin/zsh" }
