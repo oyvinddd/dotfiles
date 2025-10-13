@@ -2,7 +2,6 @@
 import = ["~/.config/alacritty/themes/themes/falcon.toml"]
 [font]
 normal = { family = "NotoMono NFM", style = "Regular" }
-#normal = { family = "NotoSansN MF", style = "Bold" }
 size = 18.0
 offset = { x = 2, y = 2 }
 [window]
