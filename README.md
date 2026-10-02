@@ -18,7 +18,37 @@ The setup uses 4 spaces for indentation.
 
 ---
 
-## 1. Homebrew
+### Table of Contents
+
+- [1. Homebrew](#1-homebrew)
+- [2. Alacritty](#2-alacritty)
+- [3. Alacritty configuration](#3-alacritty-configuration)
+- [4. JetBrains Mono](#4-jetbrains-mono)
+- [5. Rose Pine Moon for Alacritty](#5-rose-pine-moon-for-alacritty)
+- [6. Zsh](#6-zsh)
+- [7. Git](#7-git)
+- [8. Neovim](#8-neovim)
+- [9. Neovim configuration directory](#9-neovim-configuration-directory)
+- [10. Lazy.nvim](#10-lazynvim)
+- [11. Neovim configuration](#11-neovim-configuration)
+- [12. Start Neovim](#12-start-neovim)
+- [13. Neovim plugins](#13-neovim-plugins)
+- [14. Telescope dependencies](#14-telescope-dependencies)
+- [15. Treesitter](#15-treesitter)
+- [16. LSP](#16-lsp)
+- [17. LSP shortcuts](#17-lsp-shortcuts)
+- [18. tmux](#18-tmux)
+- [19. tmux configuration](#19-tmux-configuration)
+- [20. Recommended tmux workflow](#20-recommended-tmux-workflow)
+- [21. Suggested project workflow](#21-suggested-project-workflow)
+- [22. Health checks](#22-health-checks)
+- [23. Complete installation checklist](#23-complete-installation-checklist)
+- [24. Configuration locations](#24-configuration-locations)
+- [25. Backup / migrate to another Mac](#25-backup--migrate-to-another-mac)
+- [26. Quick reference](#26-quick-reference)
+- [27. Result](#27-result)
+
+# 1. Homebrew
 
 Homebrew is used to install command-line tools.
 
@@ -46,87 +76,35 @@ Make sure `/opt/homebrew/bin` is in your PATH if the installer asks you to confi
 
 # 2. Alacritty
 
-## Install
-
-The Homebrew Alacritty cask may be unavailable/disabled when its macOS build does not satisfy Homebrew's Gatekeeper requirements.
-
-Use the official Alacritty GitHub release instead:
+Download the latest macOS `.dmg` from the official releases:
 
 https://github.com/alacritty/alacritty/releases
 
-For macOS, download:
+For Apple Silicon, use:
 
 ```text
 Alacritty-vX.Y.Z.dmg
 ```
 
-For example:
+Open the DMG and drag `Alacritty.app` to `/Applications`.
 
-```text
-Alacritty-v0.17.0.dmg
-```
-
-Do **not** download:
-
-```text
-*.msi
-*.exe
-*.gz
-Source code
-```
-
-Open the DMG and drag:
-
-```text
-Alacritty.app
-```
-
-to:
-
-```text
-/Applications
-```
-
-## Gatekeeper
-
-If macOS displays:
-
-```text
-"Alacritty" Not Opened
-
-Apple could not verify "Alacritty" is free of malware...
-```
-
-First try:
+If macOS blocks it with Gatekeeper, use:
 
 **System Settings → Privacy & Security → Open Anyway**
 
-Then confirm **Open**.
-
-Only do this if you obtained Alacritty from a source you trust, preferably the official Alacritty release.
-
-Do not disable Gatekeeper globally.
-
-## Verify
+Verify:
 
 ```bash
 /Applications/Alacritty.app/Contents/MacOS/alacritty --version
 ```
 
-Optionally make the binary available as `alacritty`:
+Optional shell command:
 
 ```bash
 sudo ln -s /Applications/Alacritty.app/Contents/MacOS/alacritty /usr/local/bin/alacritty
 ```
 
-If `/usr/local/bin/alacritty` already exists, inspect it first:
-
-```bash
-which alacritty
-ls -l "$(which alacritty)"
-```
-
----
+Do not disable Gatekeeper globally.
 
 # 3. Alacritty configuration
 
@@ -200,7 +178,7 @@ size = 14.0
 
 ---
 
-# 5. Rosé Pine Moon for Alacritty
+# 5. Rose Pine Moon for Alacritty
 
 Create:
 
