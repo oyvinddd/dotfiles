@@ -132,7 +132,7 @@ decorations = "Buttonless"
 normal = { family = "JetBrains Mono", style = "Regular" }
 bold = { family = "JetBrains Mono", style = "Bold" }
 italic = { family = "JetBrains Mono", style = "Italic" }
-size = 14.0
+size = 16.0
 
 [selection]
 save_to_clipboard = true
