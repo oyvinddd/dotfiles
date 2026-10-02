@@ -14,8 +14,6 @@ A reproducible setup for a Mac with Apple Silicon (M1/M2/M3/M4), using:
 - **tmux** — terminal multiplexer
 - **Zsh** — shell
 
-The setup uses 4 spaces for indentation.
-
 ---
 
 ### Table of Contents
@@ -124,7 +122,8 @@ Use:
 
 ```toml
 [window]
-opacity = 0.92
+opacity = 0.6
+blur = true
 padding = { x = 12, y = 10 }
 decorations = "Buttonless"
 
